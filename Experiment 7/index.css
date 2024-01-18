@@ -1,0 +1,759 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+html{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+body{
+    background-color: #eee;
+    background-attachment: fixed;
+}
+.header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10px;
+    background: rgba(0, 0, 0, 1);
+    z-index: 1;
+}
+.header .name h3{
+    margin-left: 20px;
+    color: #fff;
+    font-size: 17px;
+    font-family: Helvetica;
+    letter-spacing: 2px;
+    line-height: 25px;
+}
+.header .name h4{
+    margin-left: 20px;
+    color: #fff;
+    font-size: 15.5px;
+    font-family: Helvetica;
+    letter-spacing: 2px;
+}
+.header .navbar a, .header .navbar h4{
+    font-weight: bold;
+    color: #fff;
+    font-size: 20px;
+    padding: 0 15px;
+    border-right: 1px solid #fff;
+    cursor: pointer;
+    float: left;
+}
+.header .navbar a:hover, .header .navbar h4:hover{
+    color: rgb(117, 220, 117);
+}
+#i1, #i2, #i5{
+    transform: rotateZ(270deg);
+}
+.header .navbar.active{
+    display: block;
+    transition: .5s linear;
+}
+#i1.active, #i2.active, #i5.active{
+    transform: rotateZ(0deg);
+}
+#menu-btn{
+    border: 1px solid;
+    height: 40px;
+    width:40px;
+    border-radius: 10px;
+    background: #f1ebeb;
+    text-align: center;
+    font-size: 20px;
+    padding: 8px;
+    cursor: pointer;
+    display: none;
+}
+#menu-btn:hover{
+    background: rgb(117, 220, 117);
+    color: #fff;
+}
+.header .navbar .sub-menu-1{
+    background-color: rgba(0, 0, 0, 1);
+    position: absolute;
+    top: 100%;
+    right: 437px;
+    width: 200px;
+    height: 310px;
+    display: none;
+}
+.header .navbar .sub-menu-1.active{
+    display: block;
+}
+.header .navbar .sub-menu-1 a{
+    border: none;
+    border-bottom: 1px solid #fff;
+    width: 85%;
+    display: block;
+    padding: 10px 0;
+    margin-left: 7.5%;
+}
+.header .navbar .sub-menu-2{
+    background-color: rgba(0, 0, 0, 1);
+    position: absolute;
+    top: 100%;
+    right: 200px;
+    width: 150px;
+    height: 175px;
+    display: none;
+}
+.header .navbar .sub-menu-2.active{
+    display: block;
+}
+.header .navbar .sub-menu-2 a, .header .navbar .sub-menu-2 h4{
+    border: none;
+    border-bottom: 1px solid #fff;
+    width: 85%;
+    display: block;
+    padding: 10px 0;
+    margin-left: 7.5%;
+}
+.header .navbar .sub-menu-2 .sub-menu-2-1{
+    background-color: rgba(0, 0, 0, 1);
+    position: absolute;
+    top: 40px;
+    right: -150px;
+    width: 150px;
+    height: 175px;
+    display: none;
+}
+.header .navbar .sub-menu-2 .sub-menu-2-1.active{
+    display: block;
+}
+.header .navbar a:last-child, .header .navbar h4:last-child{
+    border: none;
+}
+.first-body .part1{
+    width: 100%;
+    font-size: 30px;
+    color: rgb(221, 70, 70);
+    text-align: center;
+    margin-top: 50px;
+}
+.first-body .part2{
+    height: 400px;
+    width: 70%;
+    margin: 20px 15%;
+    animation: display 22s step-end infinite forwards;
+}
+@keyframes display {
+    0%{
+        background: url("LIC-Img1.jpg");
+        background-size: 100% 100%;
+    }
+    9%{
+        background: url("LIC-Img2.jpg");
+        background-size: 100% 100%;
+    }
+    18%{
+        background: url("LIC-Img3.jpg");
+        background-size: 100% 100%;
+    }
+    27%{
+        background: url("LIC-Img4.png");
+        background-size: 100% 100%;
+    }
+    36%{
+        background: url("LIC-Img5.png");
+        background-size: 100% 100%;
+    }
+    45%{
+        background: url("LIC-Img6.jpeg");
+        background-size: 100% 100%;
+    }
+    54%{
+        background: url("LIC-Img7.jpeg");
+        background-size: 100% 100%;
+    }
+    63%{
+        background: url("LIC-Img8.jpg");
+        background-size: 100% 100%;
+    }
+    72%{
+        background: url("LIC-Img9.png");
+        background-size: 100% 100%;
+    }
+    81%{
+        background: url("LIC-Img10.jpg");
+        background-size: 100% 100%;
+    }
+    90%{
+        background: url("LIC-Img11.png");
+        background-size: 100% 100%;
+    }
+    100%{
+        background: url("LIC-Img1.jpg");
+        background-size: 100% 100%;
+    }
+}
+.second-body{
+    display: flex;
+    width: 50%;
+    margin: 30px 25%;
+    justify-content: space-between;
+}
+.second-body button{
+    font-weight: bolder;
+    background-color: rgb(243, 30, 30);
+    width: 150px;
+    height: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 5px 5px 0px 1px rgb(148, 0, 0);
+}
+.second-body button a{
+    padding: 17px;
+    color: #fff;
+}
+.second-body button:hover{
+    background-color: rgba(243, 30, 30, 0.7);
+}
+.third-body{
+    width: 90%;
+    margin: 100px 5%;
+    height: 850px;
+}
+.third-body .part1{
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    color: rgb(221, 70, 70);
+}
+.third-body .part2{
+    margin: 50px 0;
+    width: 100%;
+}
+.third-body img{
+    width: 70%;
+    height: 100%;
+    margin: 0 15%;
+}
+.third-body .part2 .part2-1, .third-body .part2 .part2-4, .third-body .part2 .part2-5{
+    height: 250px;
+    padding: 40px;
+    width: 50%;
+    float: left;
+    overflow: hidden;
+}
+.third-body .part2 .part2-2, .third-body .part2 .part2-3, .third-body .part2 .part2-3-E, .third-body .part2 .part2-6{
+    padding: 30px 20px;
+    height: 250px;
+    text-align: center;
+    width: 50%;
+    float: left;
+}
+.third-body .part2 .part2-2 h3, .third-body .part2 .part2-3 h3, .third-body .part2 .part2-3-E h3, .third-body .part2 .part2-6 h3{
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+.third-body .part2 .part2-2 h4, .third-body .part2 .part2-3 h4, .third-body .part2 .part2-3-E h4, .third-body .part2 .part2-6 h4{
+    font-size: 22px;
+    color: rgba(0, 0, 0, 0.7);
+}
+.third-body .part2 .part2-3-E{
+    display: none;
+}
+.fourth-body .part1{
+    width: 60%;
+    margin: 0px 20%;
+    font-size: 30px;
+    color: rgb(221, 70, 70);
+    text-align: center;
+}
+.fourth-body .part2{
+    height: 400px;
+    width: 60%;
+    margin: 20px 20%;
+    animation: slide 21s step-end infinite forwards;
+}
+@keyframes slide{
+    0%{
+        background: url('Img1.jpg');
+        background-size: 100% 100%;
+    }
+    15%{
+        background: url('Img2.png');
+        background-size: 100% 100%;
+    }
+    31%{
+        background: url('Img3.jpg');
+        background-size: 100% 100%;
+    }
+    45%{
+        background: url('Img4.png');
+        background-size: 100% 100%;
+    }
+    64%{
+        background: url('Img5.jpg');
+        background-size: 100% 100%;
+    }
+    76%{
+        background: url('Img6.jpg');
+        background-size: 100% 100%;
+    }
+    88%{
+        background: url('Img7.jpg');
+        background-size: 100% 100%;
+    }
+    100%{
+        background: url('Img1.jpg');
+        background-size: 100% 100%;
+    }
+}
+.fifth-body{
+    margin: 30px 10%;
+    width: 80%;
+    display: flex;
+}
+.fifth-body .part1{
+    width: 50%;
+}
+.fifth-body .part1 .part1-1{
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: rgb(221, 70, 70);
+}
+.fifth-body .part1 .part1-2{
+    width: 200px;
+    height: 50px;
+}
+.fifth-body .part1 .part1-2 img{
+    width: 100%;
+    height: 100%;
+}
+.fifth-body .part1 .part1-3, .fifth-body .part1 .part1-3 a{
+    color: rgba(0, 0, 0, 1);
+    width: 80%;
+    margin-top: 30px;
+    font-size: 20px;
+}
+.fifth-body .part1 .part1-4 button{
+    margin-top: 30px;
+    color: #fff;
+    font-weight: bolder;
+    background-color: rgb(243, 30, 30);
+    width: 200px;
+    height: 50px;
+    font-size: 16px;
+    box-shadow: 5px 5px 0px 1px rgb(148, 0, 0);
+}
+.fifth-body .part1 .part1-4 button:hover{
+    background-color: rgba(243, 30, 30, 0.7)
+}
+.fifth-body .part2{
+    width: 50%;
+    border: 2px solid rgba(0, 0, 0, 1);
+}
+.fifth-body .part2 iframe{
+    width: 100%;
+    height: 100%;
+}
+.email-body{
+    padding: 20px;
+    position: fixed;
+    left: 50px;
+    bottom: 50px;
+    width: 300px;
+    height: 300px;
+    background-color: #b6b2b2;
+    border-radius: 10px;
+    display: none;
+}
+.email-body.active{
+    display: block;
+}
+.email-body input, .email-body textarea{
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(0, 0, 0, 1);
+    padding: 2px 5px;
+    font-size: 16px;
+    border-radius: 10px;
+    resize: none;
+}
+.email-body button{
+    width: 30%;
+    height: 40px;
+    margin: 0 9%;
+    background-color: rgb(243, 30, 30);
+    color: #fff;
+    font-size: 16px;
+    font-weight: bolder;
+    border-radius: 10px;
+}
+.email-body button:hover{
+    background-color: rgba(243, 30, 30, 0.7);
+}
+.sixth-body{
+    width: 100%;
+    height: 300px;
+    margin-top: 80px;
+}
+.sixth-body .part1{
+    width: 100%;
+    text-align: center;
+    font-size: 35px;
+    color: rgb(221, 70, 70);
+}
+.sixth-body .part2{
+    width: 80%;
+    text-align: center;
+    margin: auto;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.4);
+}
+.sixth-body .part3{
+    width: 70%;
+    margin-top: 30px;
+    margin: auto;
+}
+.sixth-body .part3 .qfirst, .sixth-body .part3 .qsecond{
+    display: flex;
+    font-size: 25px;
+    margin: 10px 0;
+    justify-content: space-between;
+}
+.sixth-body .part3 .qfirst:hover, .sixth-body .part3 .qsecond:hover{
+    color: rgb(221, 70, 70);
+}
+.sixth-body .part3 .afirst, .sixth-body .part3 .asecond{
+    font-size: 20px;
+    margin: 10px 0;
+    color: rgba(0, 0, 0, 0.6);
+    text-align: justify;
+    display: none;
+    transition: 1s linear;
+}
+.sixth-body .part3 .afirst.active, .sixth-body .part3 .asecond.active{
+    display: block;
+}
+#i3.active, #i4.active{
+    transform: rotateZ(180deg);
+}
+
+@media screen and (max-width: 950px){
+    .header .navbar{
+        background-color: rgba(0, 0, 0, 1);
+        position: absolute;
+        top: 110%;
+        right: 30px;
+        width: 250px;
+        box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2);
+        display: none;
+    }
+    #menu-btn{
+        display: inline-block;
+    }
+    .header .navbar a, .header .navbar h4{
+        border: none;
+        border-bottom: 1px solid #fff;
+        width: 85%;
+        display: block;
+        padding: 7px 0;
+        margin-left: 7.5%;
+    }
+    .header .navbar .sub-menu-1{
+        width: 250px;
+        position: initial;
+    }
+    .header .navbar .sub-menu-2{
+        width: 250px;
+        position: initial;
+    }
+    .header .navbar .sub-menu-2 .sub-menu-2-1{
+        width: 250px;
+        position: initial;
+    }
+    .first-body .part2{
+        height: 300px;
+    }
+    .third-body{
+        width: 70%;
+        margin: 100px 15%;
+        height: 1600px;
+    }
+    .third-body .part1{
+        width: 100%;
+        text-align: center;
+        font-size: 30px;
+        color: rgb(221, 70, 70);
+    }
+    .third-body .part2{
+        margin: 50px 0;
+        width: 100%;
+        display: block;
+    }
+    .third-body .part2 .part2-3{
+        display: none;
+    }
+    .third-body .part2 .part2-3-E{
+        display: block;
+    }
+    .third-body .part2 .part2-1, .third-body .part2 .part2-4, .third-body .part2 .part2-5{
+        height: 250px;
+        width: 100%;
+        padding: 20px 0px;
+    }
+    .third-body .part2 .part2-2, .third-body .part2 .part2-3-E, .third-body .part2 .part2-6{
+        padding: 30px 20px;
+        height: 250px;
+        text-align: center;
+        width: 100%;
+    }
+    .fourth-body .part2{
+        height: 250px;
+    }
+    .fourth-body .part1{
+        font-size: 22px;
+    }
+    .fifth-body{
+        display: block;
+        height: 600px;
+    }
+    .fifth-body .part1{
+        width: 100%;
+    }
+    .fifth-body .part1 .part1-3, .fifth-body .part1 .part1-3 a{
+        color: rgba(0, 0, 0, 1);
+        width: 70%;
+        margin-top: 30px;
+        font-size: 16px;
+    }
+    .fifth-body .part2{
+        margin-top: 20px;
+        width: 100%;
+        height: 200px;
+    }
+    .sixth-body .part1{
+        font-size: 30px;
+    }
+    .sixth-body .part3{
+        width: 75%;
+    }
+}
+@media screen and (max-width: 650px){
+    #menu-btn{
+        height: 30px;
+        width:30px;
+        border-radius: 8px;
+        font-size: 16px;
+        padding: 6px;
+    }
+    .first-body .part1{
+        width: 80%;
+        font-size: 20px;
+        margin-left: 10%;
+    }
+    .first-body .part2{
+        height: 200px;
+    }
+    .second-body{
+        display: block;
+        text-align: center;
+    }
+    .second-body button{
+        margin: 10px 0;
+    }
+    .third-body{
+        height: 1000px;
+    }
+    .third-body .part1{
+        font-size: 20px;
+    }
+    .third-body .part2 .part2-1, .third-body .part2 .part2-4, .third-body .part2 .part2-5{
+        height: 150px;
+    }
+    .third-body .part2 .part2-2, .third-body .part2 .part2-3-E, .third-body .part2 .part2-6{
+        padding: 0;
+        padding-top: 10px;
+        height: 160px;
+    }
+    .third-body .part2 .part2-2 h3, .third-body .part2 .part2-3-E h3, .third-body .part2 .part2-6 h3{
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+    }
+    .third-body .part2 .part2-2 h4, .third-body .part2 .part2-3-E h4, .third-body .part2 .part2-6 h4{
+        padding: 0;
+        padding-bottom: 10px;
+        font-size: 16px;
+    }
+    .fourth-body .part2{
+        height: 180px;
+    }
+    .fourth-body .part1{
+        font-size: 16px;
+        width: 100%;
+        margin: auto;
+    }
+    .fifth-body{
+        display: block;
+        height: 500px;
+    }
+    .fifth-body .part1 .part1-1{
+        font-size: 20px;
+    }
+    .fifth-body .part1 .part1-3, .fifth-body .part1 .part1-3 a{
+        color: rgba(0, 0, 0, 1);
+        width: 96%;
+        margin-top: 20px;
+        font-size: 16px;
+    }
+    .fifth-body .part2{
+        height: 150px;
+    }
+    .sixth-body{
+        height: 200px;
+    }
+    .sixth-body .part1{
+        font-size: 20px;
+    }
+    .sixth-body .part2{
+        font-size: 16px;
+    }
+    .sixth-body .part3{
+        width: 80%;
+    }
+    .sixth-body .part3 .qfirst, .sixth-body .part3 .qsecond{
+        font-size: 16px;
+    }
+    .sixth-body .part3 .afirst, .sixth-body .part3 .asecond{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 400px){
+    .header .name h3{
+        font-size: 14px;
+    }
+    .header .name h4{
+        font-size: 12.7px;
+    }
+    #menu-btn{
+        height: 30px;
+        width:30px;
+        border-radius: 8px;
+        font-size: 16px;
+        padding: 6px;
+    }
+    .header .navbar{
+        right: 12px;
+    }
+    .header .navbar a, .header .navbar h4{
+        font-size: 16px;
+    }
+    .first-body .part1{
+        margin-top: 10px;
+        font-size: 16px;
+    }
+    .first-body .part2{
+        height: 130px;
+    }
+    .second-body button{
+        margin: 10px 0;
+        width: 120px;
+        height: 30px;
+    }
+    .second-body button a{
+        font-size: 12px;
+    }
+    .third-body{
+        width: 80%;
+        margin: 20px 10%;
+        height: 950px;
+    }
+    .third-body .part2{
+        height: 900px;
+        margin-top: 20px;
+        margin-bottom: 0;
+    }
+    .third-body .part2 .part2-1, .third-body .part2 .part2-4, .third-body .part2 .part2-5{
+        height: 130px;
+    }
+    .third-body .part2 .part2-2, .third-body .part2 .part2-3-E, .third-body .part2 .part2-6{
+        padding-top: 10px;
+        height: 170px;
+    }
+    .third-body .part2 .part2-2 h4, .third-body .part2 .part2-3-E h4, .third-body .part2 .part2-6 h4{
+        font-size: 14px;
+    }
+    .fourth-body .part2{
+        height: 140px;
+    }
+    .fourth-body .part1{
+        width: 90%;
+        font-size: 14px;
+    }
+    .fifth-body{
+        display: block;
+        height: 450px;
+    }
+    .fifth-body .part1 .part1-1{
+        font-size: 16px;
+    }
+    .fifth-body .part1 .part1-2{
+        width: 120px;
+        height: 40px;
+    }
+    .fifth-body .part1 .part1-3, .fifth-body .part1 .part1-3 a{
+        width: 100%;
+        margin-top: 16px;
+        font-size: 14px;
+    }
+    .fifth-body .part1 .part1-4 button{
+        margin-top: 20px;
+        width: 120px;
+        height: 40px;
+        font-size: 12px;
+    }
+    .fifth-body .part2{
+        height: 130px;
+    }
+    .email-body{
+        left: 10px;
+        bottom: 10px;
+        width: 240px;
+        height: 260px;
+    }
+    .email-body input, .email-body textarea{
+        height: 40px;
+        font-size: 14px;
+    }
+    .email-body button{
+        width: 40%;
+        height: 30px;
+        margin: 0 4%;
+        font-size: 13px;
+    }
+    .sixth-body{
+        margin-top: 20px;
+        height: 220px;
+    }
+    .sixth-body .part1{
+        font-size: 18px;
+    }
+    .sixth-body .part2{
+        font-size: 12px;
+    }
+    .sixth-body .part3{
+        width: 80%;
+    }
+    .sixth-body .part3 .qfirst, .sixth-body .part3 .qsecond{
+        font-size: 14px;
+    }
+    .sixth-body .part3 .afirst, .sixth-body .part3 .asecond{
+        font-size: 12px;
+    }
+}
